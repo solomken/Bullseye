@@ -7,12 +7,46 @@
 
 import SwiftUI
 
-struct TextViews: View {
+struct InstructionText: View {
+    var text: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(text.uppercased())
+            .bold()
+            .multilineTextAlignment(.center)
+            .lineSpacing(4.0)
+            .font(.footnote)
+            .kerning(2)
+            .foregroundColor(Color("FontColor"))
+    }
+}
+
+struct TargetText: View {
+    var text: String
+    
+    var body: some View {
+        Text(text)
+            .fontWeight(.black)
+            .font(.largeTitle)
+            .kerning(-1.0)
+            .foregroundColor(Color("FontColor"))
+    }
+}
+
+struct SliderText: View {
+    var text: String
+    
+    var body: some View {
+        Text(text)
+            .bold()
+            .foregroundColor(Color("FontColor"))
     }
 }
 
 #Preview {
-    TextViews()
+    VStack {
+        InstructionText(text: "Instructions")
+        TargetText(text: "88")
+        SliderText(text: "1")
+    }
 }
