@@ -47,6 +47,6 @@ struct SliderText: View {
     VStack {
         InstructionText(text: "Instructions")
         TargetText(text: "88")
-        SliderText(text: "1")
+        SliderText(text: "1111")
     }
 }
