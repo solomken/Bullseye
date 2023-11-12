@@ -43,10 +43,25 @@ struct SliderText: View {
     }
 }
 
+struct LabelText: View {
+    var title: String
+    
+    var body: some View {
+        Text(title.uppercased())
+            .bold()
+            .multilineTextAlignment(.center)
+            .lineSpacing(4.0)
+            .font(.caption)
+            .kerning(1.5)
+            .foregroundColor(Color("FontColor"))
+    }
+}
+
 #Preview {
     VStack {
         InstructionText(text: "Instructions")
         TargetText(text: "88")
         SliderText(text: "1111")
+        LabelText(title: "score")
     }
 }

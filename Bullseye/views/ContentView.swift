@@ -14,7 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            Color("BackgroundColor").ignoresSafeArea()
+            BackgroundView(game: $game)
             VStack {
                 InstructionsView(game: $game)
                 SliderView(sliderValue: $sliderValue)
@@ -41,9 +41,11 @@ struct SliderView: View {
     var body: some View {
         HStack {
             SliderText(text: "1")
+                .frame(width: 35)
             Slider(value: $sliderValue, in: 1.0...100.0)
                 .accentColor(.red)
             SliderText(text: "100")
+                .frame(width: 35)
         }
         .padding()
     }
@@ -91,11 +93,12 @@ struct HitMeButton: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-        ContentView()
-            .preferredColorScheme(.dark)
-            .previewDevice("iPhone SE (3rd generation)")
-    }
+#Preview("Default scheme") {
+    ContentView()
+}
+
+#Preview("Dark scheme") {
+    ContentView()
+        .preferredColorScheme(.dark)
+        .previewDevice("iPhone SE (3rd generation)")
 }
