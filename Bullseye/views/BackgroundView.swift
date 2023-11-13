@@ -10,7 +10,6 @@ import SwiftUI
 struct BackgroundView: View {
     @Binding var game: Game
     
-    
     var body: some View {
         VStack {
             TopView(game: $game)
@@ -19,8 +18,7 @@ struct BackgroundView: View {
         }
         .padding()
         .background(
-            Color("BackgroundColor")
-                .ignoresSafeArea()
+            RingsView()
         )
     }
 }
@@ -28,10 +26,13 @@ struct BackgroundView: View {
 struct TopView: View {
     @Binding var game: Game
     
-    
     var body: some View {
         HStack {
-            RoundedImageViewStroked(systemName: "arrow.counterclockwise")
+            Button {
+                game.restart()
+            } label: {
+                RoundedImageViewStroked(systemName: "arrow.counterclockwise")
+            }
             Spacer()
             RoundedImageViewFilled(systemName: "list.dash")
         }
@@ -61,6 +62,30 @@ struct BottomView: View {
             NumberView(title: "Round", text: String(game.round))
         }
         .padding()
+    }
+}
+
+struct RingsView: View {
+    @Environment (\.colorScheme) var colorScheme
+    
+    var body: some View {
+        ZStack {
+            Color("BackgroundColor")
+                .ignoresSafeArea()
+            
+            ForEach(1..<6) { ring in
+                let size = CGFloat(ring * 100)
+                let opacity = colorScheme == .dark ? 0.1 : 0.3
+                
+                Circle()
+                    .stroke(lineWidth: 20)
+                    .fill(
+                        RadialGradient(colors: [Color("RingColor").opacity(opacity * 0.8), Color("RingColor").opacity(0)], center: .center, startRadius: 100, endRadius: 300)
+                    )
+                    .frame(width: size, height: size)
+
+            }
+        }
     }
 }
 
