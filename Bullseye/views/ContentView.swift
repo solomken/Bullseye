@@ -80,7 +80,7 @@ struct HitMeButton: View {
             isPresented: $alertIsVisible,
             actions: {
                 Button("Awesome") {
-                    game.target = Int.random(in: 1...100)
+                    game.startNewRound(points: game.points(sliderValue: Int(sliderValue)))
                 }
             },
             message: {
