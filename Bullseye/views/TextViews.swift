@@ -57,11 +57,56 @@ struct LabelText: View {
     }
 }
 
+struct BodyText: View {
+    var title: String
+    
+    var body: some View {
+        Text(title)
+            .multilineTextAlignment(.center)
+            .font(.subheadline)
+            .fontWeight(.semibold)
+            .lineSpacing(12.0)
+            .padding(10)
+    }
+}
+
+struct ButtonText: View {
+    var title: String
+    
+    var body: some View {
+        Text(title)
+            .padding()
+            .frame(maxWidth: .infinity)
+            .foregroundColor(.white)
+            .fontWeight(.bold)
+            .background (
+                Color.accentColor
+            )
+            .cornerRadius(12)
+    }
+}
+
 #Preview {
     VStack {
         InstructionText(text: "Instructions")
         TargetText(text: "88")
         SliderText(text: "1111")
         LabelText(title: "score")
+        BodyText(title: "You scored 200 Points\n🎉🎉🎉")
+        ButtonText(title: "Start New Round")
     }
+    .padding()
+}
+
+#Preview("Dark") {
+    VStack {
+        InstructionText(text: "Instructions")
+        TargetText(text: "88")
+        SliderText(text: "1111")
+        LabelText(title: "score")
+        BodyText(title: "You scored 200 Points\n🎉🎉🎉")
+        ButtonText(title: "Start New Round")
+    }
+    .padding()
+    .preferredColorScheme(.dark)
 }

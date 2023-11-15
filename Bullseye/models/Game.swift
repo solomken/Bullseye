@@ -18,7 +18,7 @@ struct Game {
         
         if difference == 0 {
             bonusPoints = 100
-        } else if difference <= 2 {
+        } else if difference == 1 || difference == 2 {
             bonusPoints = 50
         } else {
             bonusPoints = 0
