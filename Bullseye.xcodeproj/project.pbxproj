@@ -19,6 +19,7 @@
 		45A9B4A92AFBB06B00DD6A67 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9B4A82AFBB06B00DD6A67 /* Game.swift */; };
 		45A9B4B12AFBB56200DD6A67 /* BullseyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9B4B02AFBB56200DD6A67 /* BullseyeTests.swift */; };
 		45D8540C2AFFBCE3002E44C5 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D8540B2AFFBCE3002E44C5 /* Shapes.swift */; };
+		45F34E642B079180006506D9 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F34E632B079180006506D9 /* LeaderboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		45A9B4AE2AFBB56200DD6A67 /* BullseyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullseyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A9B4B02AFBB56200DD6A67 /* BullseyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullseyeTests.swift; sourceTree = "<group>"; };
 		45D8540B2AFFBCE3002E44C5 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
+		45F34E632B079180006506D9 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				455505262B00CBB700A8DD6F /* RoundedViews.swift */,
 				455505282B00D46B00A8DD6F /* BackgroundView.swift */,
 				4545076C2B0522CE00D07487 /* PointsView.swift */,
+				45F34E632B079180006506D9 /* LeaderboardView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				455505272B00CBB700A8DD6F /* RoundedViews.swift in Sources */,
+				45F34E642B079180006506D9 /* LeaderboardView.swift in Sources */,
 				45280AB62AFA727F00A054C6 /* ContentView.swift in Sources */,
 				45A9B4A92AFBB06B00DD6A67 /* Game.swift in Sources */,
 				4545076D2B0522CE00D07487 /* PointsView.swift in Sources */,
