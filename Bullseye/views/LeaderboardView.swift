@@ -46,6 +46,7 @@ struct HeaderView: View {
             }
         }
         .padding(.horizontal)
+        .frame(maxWidth: Constants.Leaderboard.maxRowWidth)
     }
 }
 
@@ -97,4 +98,5 @@ struct RowView: View {
 
 #Preview("Dark scheme") {
     LeaderboardView(leaderBoardIsShowing: .constant(false))
+        .preferredColorScheme(.dark)
 }
