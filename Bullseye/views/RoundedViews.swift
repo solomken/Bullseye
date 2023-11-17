@@ -44,14 +44,29 @@ struct RoundRectTextView: View {
         Text(text)
             .bold()
             .font(.title3)
-            .kerning(-0.2)
+            .foregroundStyle(Color("FontColor"))
             .frame(width: Constants.General.roundRectViewWidth, height: Constants.General.roundRectViewHeight)
-            .foregroundColor(Color("FontColor"))
             .overlay (
                 RoundedRectangle(cornerRadius: Constants.General.roundRectViewCornerRadius)
                     .stroke(lineWidth: Constants.General.strokeWidth)
                     .foregroundColor(Color("ButtonStrokeColor"))
                     
+            )
+    }
+}
+
+struct RoundCircleTextView: View {
+    var index: Int
+    
+    var body: some View {
+        Text(String(index))
+            .foregroundStyle(Color("FontColor"))
+            .frame(width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength)
+            .fontWeight(.bold)
+            .font(.title3)
+            .overlay(
+                Circle()
+                    .strokeBorder(Color("LeaderBoardRowColor"), lineWidth: Constants.General.strokeWidth)
             )
     }
 }
@@ -62,6 +77,7 @@ struct PreviewView: View {
             RoundedImageViewFilled(systemName: "arrow.counterclockwise")
             RoundedImageViewStroked(systemName: "list.dash")
             RoundRectTextView(text: "999")
+            RoundCircleTextView(index: 1)
         }
     }
 }

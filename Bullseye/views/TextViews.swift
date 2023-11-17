@@ -86,6 +86,42 @@ struct ButtonText: View {
     }
 }
 
+struct ScoreText: View {
+    var score: Int
+    
+    var body: some View {
+        Text(String(score))
+            .bold()
+            .font(.title3)
+            .kerning(-0.2)
+            .foregroundColor(Color("FontColor"))
+    }
+}
+
+struct DateText: View {
+    var date: Date
+    
+    var body: some View {
+        Text(date, style: .time)
+            .bold()
+            .font(.title3)
+            .kerning(-0.2)
+            .foregroundColor(Color("FontColor"))
+    }
+}
+
+struct HeaderText: View {
+    var text: String
+    
+    var body: some View {
+        Text(text.uppercased())
+            .foregroundStyle(Color("FontColor"))
+            .fontWeight(.black)
+            .kerning(2.0)
+            .font(.title)
+    }
+}
+
 #Preview {
     VStack {
         InstructionText(text: "Instructions")
@@ -94,6 +130,9 @@ struct ButtonText: View {
         LabelText(title: "score")
         BodyText(title: "You scored 200 Points\n🎉🎉🎉")
         ButtonText(title: "Start New Round")
+        ScoreText(score: 149)
+        DateText(date: Date())
+        HeaderText(text: "Leaderboard")
     }
     .padding()
 }
@@ -106,6 +145,9 @@ struct ButtonText: View {
         LabelText(title: "score")
         BodyText(title: "You scored 200 Points\n🎉🎉🎉")
         ButtonText(title: "Start New Round")
+        ScoreText(score: 149)
+        DateText(date: Date())
+        HeaderText(text: "Leaderboard")
     }
     .padding()
     .preferredColorScheme(.dark)
