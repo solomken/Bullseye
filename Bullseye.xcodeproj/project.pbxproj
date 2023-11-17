@@ -15,6 +15,7 @@
 		455505252B00C23E00A8DD6F /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455505242B00C23E00A8DD6F /* TextViews.swift */; };
 		455505272B00CBB700A8DD6F /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455505262B00CBB700A8DD6F /* RoundedViews.swift */; };
 		455505292B00D46B00A8DD6F /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455505282B00D46B00A8DD6F /* BackgroundView.swift */; };
+		456DF3DE2B063B4E00CA76AC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456DF3DD2B063B4E00CA76AC /* Constants.swift */; };
 		45A9B4A92AFBB06B00DD6A67 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9B4A82AFBB06B00DD6A67 /* Game.swift */; };
 		45A9B4B12AFBB56200DD6A67 /* BullseyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9B4B02AFBB56200DD6A67 /* BullseyeTests.swift */; };
 		45D8540C2AFFBCE3002E44C5 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D8540B2AFFBCE3002E44C5 /* Shapes.swift */; };
@@ -40,6 +41,7 @@
 		455505242B00C23E00A8DD6F /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
 		455505262B00CBB700A8DD6F /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
 		455505282B00D46B00A8DD6F /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		456DF3DD2B063B4E00CA76AC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		45A9B4A82AFBB06B00DD6A67 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		45A9B4AE2AFBB56200DD6A67 /* BullseyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullseyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A9B4B02AFBB56200DD6A67 /* BullseyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullseyeTests.swift; sourceTree = "<group>"; };
@@ -86,8 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				45A9B4A72AFBB04900DD6A67 /* app */,
-				45A9B4A62AFBB03300DD6A67 /* views */,
 				45A9B4A52AFBB01C00DD6A67 /* models */,
+				45A9B4A62AFBB03300DD6A67 /* views */,
 				45280AB92AFA728200A054C6 /* Preview Content */,
 			);
 			path = Bullseye;
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				45A9B4A82AFBB06B00DD6A67 /* Game.swift */,
+				456DF3DD2B063B4E00CA76AC /* Constants.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				45280AB42AFA727F00A054C6 /* BullseyeApp.swift in Sources */,
 				455505252B00C23E00A8DD6F /* TextViews.swift in Sources */,
 				45D8540C2AFFBCE3002E44C5 /* Shapes.swift in Sources */,
+				456DF3DE2B063B4E00CA76AC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
